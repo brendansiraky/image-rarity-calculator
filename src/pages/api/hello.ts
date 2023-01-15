@@ -30,7 +30,7 @@ async function fetcher(path: string) {
 }
 
 const endpoint = 'https://api.dropboxapi.com/2/files/list_folder'
-const token = 'sl.BW5VDFR9gHOqrKEluWyaayS6LBPf-14hFcayjNd2kxT_YY0dY2ku1xOj9Vh0Wywv16B9RIS6DfIFBkTGKtYqCv3-ljbUiECOm3XQlF_THSiQOJOEglg0U1ttzA3OCdiwV7PiYucE'
+const token = 'sl.BW7qSIPKrc6qj4M4uisBwwt3irxkIuQQAxFYmjW6hB4Fz4ItS-6qrNS6yLKourat4HuGDCuOPSPgIi1gQXSgy9U6W3KP1lUx44XZMI-BzW1ldEZu6IvLyS4N6VDBvjXuFJx5gqI'
 
 export default async function handler(
     req: NextApiRequest,
