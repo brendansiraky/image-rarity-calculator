@@ -76,7 +76,7 @@ export default function Home() {
 
 					} else {
 						batched[traitType].traits.push({
-							name,
+							name: `${name}#${rarity}`,
 							value: rarity
 						})
 					}
@@ -84,11 +84,12 @@ export default function Home() {
 		
 			}
 
-			const percentageBatched = Object.entries(batched).map(([traitType, { totalRarity, traits }]) => {
+			const percentageBatched = Object.entries(batched).map((traitArr) => {
+				const [traitType, values] = traitArr as any
 				return {
-					[traitType]: traits.map((trait: any, index: number) => {
+					[traitType]: values.traits.map((trait: any, index: number) => {
 						return {
-							[trait.name]: `${((trait.value / totalRarity) * 100).toFixed(2)}%`,
+							[trait.name]: `${((trait.value / values.totalRarity) * 100).toFixed(2)}%`,
 						}
 					})
 				}
