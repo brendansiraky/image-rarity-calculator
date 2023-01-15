@@ -84,7 +84,7 @@ export default function Home() {
 		
 			}
 
-			const percentageBatched = Object.entries(batched as any).map(([traitType, { totalRarity, traits }]) => {
+			const percentageBatched = Object.entries(batched).map(([traitType, { totalRarity, traits }]) => {
 				return {
 					[traitType]: traits.map((trait: any, index: number) => {
 						return {
